@@ -69,6 +69,7 @@ namespace HelloWorld
             myDownhillBike.MyMountainColor();
             myDownhillBike.Pedal("Pedaling myDownhillBike");
             myDownhillBike.Brake();  */
+            ValuetypesContinues myVTC = new ValueTypesContinues();
             
         }
     }
