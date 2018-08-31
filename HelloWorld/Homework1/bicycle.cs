@@ -1,4 +1,3 @@
-/* 
 using System;
 
 public class Bicycle 
@@ -45,4 +44,3 @@ public class Bicycle
     }
 }
 
-*/

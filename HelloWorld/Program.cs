@@ -48,7 +48,7 @@ namespace HelloWorld
         Tricycle myTricycle = new Tricycle();
         myTricycle.Color = "Green";
         myTricycle.Brake(); */
-
+        /* 
             Bicycle2 myBike = new Bicycle2("BMX");
             MountainBike myMountain = new MountainBike();
 
@@ -68,7 +68,8 @@ namespace HelloWorld
             myMountain.Brake();
             myDownhillBike.MyMountainColor();
             myDownhillBike.Pedal("Pedaling myDownhillBike");
-            myDownhillBike.Brake();
+            myDownhillBike.Brake();  */
+            
         }
     }
 }

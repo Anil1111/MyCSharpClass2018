@@ -2,6 +2,9 @@ using System;
 
 namespace HelloWorld.Week2
 {
+    /* To remove the reference that shows up above each variable add the below item to your settings.
+       "csharp.referencesCodesLens.enabled": false,
+     */
     public class NumericTypes
     {
         #region Integral - Signed
@@ -26,13 +29,13 @@ namespace HelloWorld.Week2
         #endregion
         #region Real
         
-        private float _myFloatValue = -123.6589;
+        private float _myFloatValue = -123.6589F;
 
         private double _myDoubleValue = 12.34D;
 
         private double _myDoubleValue2 = 1E06;
 
-        private double _myDoubleValue3 = 12.34;
+        private double _myDoubleValue3 = 12.34D;
 
         private decimal _myDecimalValue = 12.234M;
         
@@ -109,9 +112,9 @@ namespace HelloWorld.Week2
             Console.WriteLine(-2.0/-0.0);
             Console.WriteLine(0.0/0.0);
             Console.WriteLine((2.0 / -0.0) - (2.0 / 0.0));
-            Console.WriteLine(0.0 / -0.0 == double.Nan);
-            Console.WriteLine(double.IsNan(0.0/0.0));
-            Console.WriteLine(object.Equals(0.0 / 0.0,double.Nan));
+            Console.WriteLine(0.0 / -0.0 == double.NaN);
+            Console.WriteLine(double.IsNaN(0.0/0.0));
+            Console.WriteLine(object.Equals(0.0 / 0.0,double.NaN));
 
         }
     }
