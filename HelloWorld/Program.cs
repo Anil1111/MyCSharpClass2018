@@ -1,4 +1,5 @@
 ﻿using System;
+using HelloWorld.Homework1RO;
 
 namespace HelloWorld
 {
@@ -27,8 +28,8 @@ namespace HelloWorld
         Car myCar = new Car();
         myCar.Color = "Green";
         myCar.CloseWindow(); */
-       
-        Bicycle bicycle = new Bicycle("Schwinn");
+       /* 
+       Bicycle bicycle = new Bicycle("Schwinn");
 
         Console.WriteLine( "Using Get " + bicycle.Color);
         bicycle.Color = "Polka Dot";
@@ -46,7 +47,28 @@ namespace HelloWorld
 
         Tricycle myTricycle = new Tricycle();
         myTricycle.Color = "Green";
-        myTricycle.Brake();  
+        myTricycle.Brake(); */
+
+            Bicycle2 myBike = new Bicycle2("BMX");
+            MountainBike myMountain = new MountainBike();
+
+            DownHillBike myDownhillBike = new DownHillBike();
+
+            Console.WriteLine(myBike.Seat);
+            Console.WriteLine(myBike.Sprocket);
+            Console.WriteLine(myBike.WheelSpokes);
+            Console.WriteLine(myMountain.WheelSpokes);
+
+            Console.WriteLine(myDownhillBike.WheelSpokes);
+            myBike.Pedal("Pedaling myBike");
+            myBike.Brake();
+
+            myMountain.MyMountainColor();
+            myMountain.Pedal("Pedaling myMountain");
+            myMountain.Brake();
+            myDownhillBike.MyMountainColor();
+            myDownhillBike.Pedal("Pedaling myDownhillBike");
+            myDownhillBike.Brake();
         }
     }
 }

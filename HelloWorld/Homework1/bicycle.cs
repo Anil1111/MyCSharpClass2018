@@ -1,4 +1,6 @@
+/* 
 using System;
+
 public class Bicycle 
 {
 //Reference type field
@@ -42,3 +44,5 @@ public class Bicycle
         Console.WriteLine("Squeezing Brake!");
     }
 }
+
+*/

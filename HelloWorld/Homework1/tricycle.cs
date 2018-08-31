@@ -1,4 +1,6 @@
+/*
 using System;
+
 public class Tricycle : Bicycle   //Inheritence
 {
 
@@ -7,3 +9,4 @@ public class Tricycle : Bicycle   //Inheritence
         Console.WriteLine("Feet are down!");
     }
 }
+*/
