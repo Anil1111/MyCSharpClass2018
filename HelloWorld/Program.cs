@@ -47,7 +47,9 @@ namespace HelloWorld
 
         Tricycle myTricycle = new Tricycle();
         myTricycle.Color = "Green";
-        myTricycle.Brake(); */
+        myTricycle.Brake();
+        Console.WriteLine(myTricycle.Sprocket);
+        */
         /* 
             Bicycle2 myBike = new Bicycle2("BMX");
             MountainBike myMountain = new MountainBike();
@@ -69,8 +71,66 @@ namespace HelloWorld
             myDownhillBike.MyMountainColor();
             myDownhillBike.Pedal("Pedaling myDownhillBike");
             myDownhillBike.Brake();  */
-            ValuetypesContinues myVTC = new ValueTypesContinues();
-            
+            HelloWorld.Week2.NumericTypes myNumericType = 
+            new HelloWorld.Week2.NumericTypes();
+            HelloWorld.Week2.ReferenceTypes myReferenceType =
+            new HelloWorld.Week2.ReferenceTypes();
+            HelloWorld.Week2.Statements myStatements = 
+            new HelloWorld.Week2.Statements();
+            HelloWorld.Week2.ValueTypesContinues myVTC = 
+            new HelloWorld.Week2.ValueTypesContinues();
+            HelloWorld.Testme.School mySchool = 
+            new HelloWorld.Testme.School();
+            HelloWorld.Testme.NaturalNumbers myNaturalNumbers =
+            new HelloWorld.Testme.NaturalNumbers();
+            myNumericType.BasicMath();
+            myNumericType.CheckOperator();
+            myNumericType.ComparisonOperatorsNumeric();
+            myNumericType.ConvertFloatToInt();
+            myNumericType.EnumSample();
+           // myNumericType.RefSample(5);
+            myNumericType.GetHashCode();
+            myNumericType.getSomeTypes();
+            myNumericType.GetType();
+            myNumericType.IncrementDecrement();
+            myNumericType.LongFromInt();
+           // myNumericType.OutSample("Joe HayDen Smith", ,)
+            myReferenceType.ArrayJaggedSample();
+            myReferenceType.ArrayRectanglurSample();
+            myReferenceType.ArraySingleSample();
+            myReferenceType.CharType();
+            myReferenceType.CompareStrings();
+      //      myReferenceType.Equals();
+            myReferenceType.GetHashCode();
+            myReferenceType.GetType();
+            myReferenceType.JoiningStrings();
+            myReferenceType.JoinStringsWithBuilder();
+            myReferenceType.PlaceHolderString();
+            myReferenceType.ToString();
+            int x,y,numlimit;
+            x = 10;
+            y = 15;
+            numlimit = 10;
+            string d;
+            d = "Sunday";
+
+            myStatements.ExpressionStatementExample(x,y);
+            myStatements.ForEachLoopExample();
+            myStatements.GetHashCode();
+            myStatements.IfStatementBasicExample(x,y);
+            myStatements.IfStatementChainExample(d);
+            myStatements.JumpStatementExample(d);
+            myStatements.SwitchStatemntExample(d);
+            myStatements.WhileLoopExample();
+            myStatements.DoWhileLoopExample();
+
+            mySchool.DisplayGradeWord("E");
+            mySchool.DisplayGradeWord("V");
+            mySchool.DisplayGradeWord("G");
+            mySchool.DisplayGradeWord("A");
+            mySchool.DisplayGradeWord("F");
+
+            myNaturalNumbers.CountMe(numlimit);
         }
     }
 }
