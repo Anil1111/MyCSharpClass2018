@@ -5,6 +5,7 @@ public class Bicycle
 //Reference type field
 // Private variables should use an underscore
     private string _color;
+    private int _sprocket = 20;
 
 //Normal Property
     public string Color 
@@ -42,5 +43,13 @@ public class Bicycle
     {
         Console.WriteLine("Squeezing Brake!");
     }
+
+    public virtual int Sprocket
+        {
+            get
+            {
+                return _sprocket;
+            }
+        }
 }
 
