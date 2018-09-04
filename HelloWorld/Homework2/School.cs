@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld.Testme
+namespace HelloWorld.Homework2
 {
     public class School
     {

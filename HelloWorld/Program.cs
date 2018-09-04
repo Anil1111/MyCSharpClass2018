@@ -83,6 +83,10 @@ namespace HelloWorld
             new HelloWorld.Testme.School();
             HelloWorld.Testme.NaturalNumbers myNaturalNumbers =
             new HelloWorld.Testme.NaturalNumbers();
+            HelloWorld.Homework2.School mySchool2 = 
+            new HelloWorld.Homework2.School();
+            HelloWorld.Homework2.NaturalNumbers myNaturalNumbers2 =
+            new HelloWorld.Homework2.NaturalNumbers();
             myNumericType.BasicMath();
             myNumericType.CheckOperator();
             myNumericType.ComparisonOperatorsNumeric();
@@ -123,14 +127,26 @@ namespace HelloWorld
             myStatements.SwitchStatemntExample(d);
             myStatements.WhileLoopExample();
             myStatements.DoWhileLoopExample();
+            myStatements.ExpressionStatementExample(x,y);
+            myStatements.ConstantExample();
 
             mySchool.DisplayGradeWord("E");
             mySchool.DisplayGradeWord("V");
             mySchool.DisplayGradeWord("G");
             mySchool.DisplayGradeWord("A");
             mySchool.DisplayGradeWord("F");
+            mySchool.DisplayGradeWord("X");
 
             myNaturalNumbers.CountMe(numlimit);
+
+            mySchool2.DisplayGradeWord("E");
+            mySchool2.DisplayGradeWord("V");
+            mySchool2.DisplayGradeWord("G");
+            mySchool2.DisplayGradeWord("A");
+            mySchool2.DisplayGradeWord("F");
+            mySchool2.DisplayGradeWord("X");
+
+            myNaturalNumbers2.CountMe(numlimit);
         }
     }
 }
