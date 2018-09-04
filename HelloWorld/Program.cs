@@ -1,5 +1,6 @@
 ﻿using System;
 using HelloWorld.Homework1RO;
+using HelloWorld.Testme;
 
 namespace HelloWorld
 {
@@ -87,6 +88,8 @@ namespace HelloWorld
             new HelloWorld.Homework2.School();
             HelloWorld.Homework2.NaturalNumbers myNaturalNumbers2 =
             new HelloWorld.Homework2.NaturalNumbers();
+            HelloWorld.Testme.IsPalinDrome myPalinDrome = 
+            new HelloWorld.Testme.IsPalinDrome();
             myNumericType.BasicMath();
             myNumericType.CheckOperator();
             myNumericType.ComparisonOperatorsNumeric();
@@ -117,6 +120,7 @@ namespace HelloWorld
             numlimit = 10;
             string d;
             d = "Sunday";
+            bool answerPalinDrome = false;
 
             myStatements.ExpressionStatementExample(x,y);
             myStatements.ForEachLoopExample();
@@ -147,6 +151,7 @@ namespace HelloWorld
             mySchool2.DisplayGradeWord("X");
 
             myNaturalNumbers2.CountMe(numlimit);
+            myPalinDrome.IsPalindrome(d,answerPalinDrome);
         }
     }
 }
