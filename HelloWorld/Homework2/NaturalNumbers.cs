@@ -15,7 +15,8 @@ namespace HelloWorld.Homework2
             {
                 //perform these actions after the expression is checked
                 
-                Console.WriteLine(i);
+                Console.Write(i);
+                Console.WriteLine(',');
                 i++;
             }
          }

@@ -50,12 +50,14 @@ namespace HelloWorld.Week2
         #region Char
         public void CharType()
         {
-               char ab = 'A';
-               char de = 'B';
-               char copyWriteSymbol = '\u00A9';
 
-               Console.WriteLine(ab == de); // false
-               Console.WriteLine("The copywrite symbol looks like {0}", copyWriteSymbol);
+            char ab = 'A'; //Character
+            char de = 'B'; //Character
+            char copyWriteSymbol = '\u00A9'; // Unicode
+            char fg = '\x0058'; // Hexidecimal
+            char hi = (char)88; // Explicit Case from int.
+            Console.WriteLine(ab == de); // false
+            Console.WriteLine("The copywrite symbol looks like {0}", copyWriteSymbol);
         }
         #endregion
         #region Arrays

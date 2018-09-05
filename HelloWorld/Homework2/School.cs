@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,28 +9,22 @@ namespace HelloWorld.Homework2
 {
     public class School
     {
-        public void DisplayGradeWord(string grade)
+        public string DisplayGradeWord(char grade)
         {
             switch (grade)
             {
-                case "E":
-                    Console.WriteLine("Excellent");
-                    break;
-                case "V":
-                    Console.WriteLine("Very Good");
-                    break;
-                case "G":
-                    Console.WriteLine("Good");
-                    break;
-                case "A":
-                    Console.WriteLine("Average");
-                    break;
-                case "F":
-                    Console.WriteLine("Fail");
-                    break;
+                case 'E':
+                    return "Excellent";
+                case 'V':
+                    return "Very Good";
+                case 'G':
+                    return "Good";
+                case 'A':
+                    return "Average";
+                case 'F': 
+                    return "Fail";
                 default:
-                    Console.WriteLine("Invalid Grade.");
-                    break;
+                    return "Invalid Grade.";
             }
         }
     }

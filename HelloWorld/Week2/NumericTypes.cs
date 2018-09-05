@@ -1,123 +1,167 @@
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelloWorld.Week2
 {
-    class NumericTypes
+    /*
+        To remove the reference that shows up above each variable add the below item to your settings.
+        "csharp.referencesCodeLens.enabled": false,
+     */
+    public class NumericTypes
     {
-        /*Integral - Signed  */
-        //-128 - 127        
+
+        #region 
+        private bool _isSetCorrect = true;
+
+        private bool _hasValue = false;
+
+        #endregion
+
+
+        #region Integral - Signed
+
+        // range -128 to 127
         private sbyte _mySbyteValue = 2;
-        
-        //–32,768 to 32,767
+
+        // range -32,768 to 32,767
         private short _myShortValue = 4;
-        
-        //–2,147,483,648 to 2,147,483,647
-        private int _myIntValue = 25000;        
 
-        //–2,147,483,648 to 2,147,483,647
-        private long _myLongValue = 1_234_567L;   //Underscores for more readability
+        // range -2,147,483,648 to 2,147,483,647
+        private int _myIntValue = 25000;
+
+        // range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+        private long _myLongValue = 1_234_567L;
         private long _myLongValue2 = 0x5F;
+        #endregion
 
-        /*Integral - Unsigned */
-        //0 - 255
+        #region Integral - Unsigned
+
+        // range 0 - 255
         private byte _myByteValue = 3;
 
-        //0 to 65,535
-        private ushort _myUShortValue = 35;
+        // range 0 - 65,535
+        private ushort _myUshortValue = 35;
 
-        //0 to 4,294,967,295
+        // range 0 to 4,294,967,295
         private uint _myUInt = 2345U;
 
-        //0 to 18,446,744,073,709,551,615
-        private ulong _myULong = 123456UL;
+        // range 0 to 18,446,744,073,709,551,615
+        private ulong _myULong = 1234UL;
+        #endregion
 
-        /*Real */
+        #region Real
 
-        //3.4E +/- 38 (7 digits)
-        private float myFloatValue = -123.6589F;        //Used for floating-point used for scientific and graphical calculations
+        // range ±1.5 x 10 superscript−45 to ±3.4 x 10 superscript38
+        private float _myFloatValue = -123.6589F;
 
-        //1.7E +/- 308 (15 digits)
-        private double _myDoubleValue = 12.34D;     //Used for floating-point used for scientific and graphical calculations
+        // range ±5.0 × 10 superscript−324 to ±1.7 × 10 superscript308
+        private double _myDoubleValue = 12.34D;
         private double _myDoubleValue2 = 1E06;
+        private double _myDoubleValue3 = 12.34;
 
-        //-7.9228E+24 - 7.9228E+24
-        private decimal _myDecimalValue = 13.234M;  //Used for Financial calculations
+        // range ±1.0 x 10 superscript-28 to ±7.9228 x 10 superscript28
+        private decimal _myDecimalValue = 12.234M;
 
-        // Enum declaration with default values
-        private enum Positon { Left, Right, Top, Bottom };
+        #endregion
 
-        // Enum declaration with defined values
-        private enum MovieType { Action = 100, Comedy = 200, Drama = 300};
+        /*
+                There are additional parts to Conversion Operators not shown in these examples.
+                They will be covered in Advanced C# later in this course.
+                These are simple examples of converting.
+         */
 
-        // Enum declaration with mixed defined and non-defined values
-        private enum Days { Sun, Mon = 8, Tue = 9, Wed = 10, Thur, Fri, Sat}
-
-        //Numeric Literal Type Inference
-        public void getSomeTypes()
-        {
-            Console.WriteLine(3.0.GetType());   // Double
-            Console.WriteLine(myFloatValue.GetType()); //Float
-        }
-        
-        //Explicit Cast where fractions are truncated and not rounded
+        /*
+            The conversion operator converts from a source type to a target type.
+            The source type provides the conversion operator. Unlike implicit conversions
+            , explicit conversion operators must be invoked by means of a cast.
+         */
         public void ConvertFloatToInt()
         {
-            int converted = (int)myFloatValue;
+            int converted = (int)_myFloatValue;
             Console.WriteLine(converted);
         }
 
-        //Implicit cast which requires no casting
-        //The reverse requires a cast
+        // Example of an implicit conversion
         public void LongFromInt()
         {
-            long someLongValue = _myIntValue;
-            int someIntValue = (int)_myLongValue;
-
-            Console.WriteLine(someLongValue);
+            long someValue = _myIntValue;
+            Console.WriteLine(someValue);
         }
 
+        /*
+            Example of an implicit conversion that takes a method parameter and returns a variable 
+            back to who ever called the method.
+         */
+        public long LongFromInt(int value)
+        {
+            return value;
+        }
+
+        // Method showing the Increment and Decrement
+        // myVal++ is equal to myVal = myVal + 1;
         public void IncrementDecrement()
         {
-            int myVal = 1, myOtherVal = 10;
-            Console.WriteLine(myVal++);
-            Console.WriteLine(myOtherVal--);
-            Console.WriteLine(--myVal);
-            Console.WriteLine(++myOtherVal);
+            int myVal = 1, myOtherVal = 10, mySecondVal = 4, mySecondOther = 23;
+            int afterVal = myVal++;
+            int afterOther = myOtherVal--;
+            int beforeVal = --mySecondVal;
+            int beforeOther = ++mySecondOther;
+
+            Console.WriteLine(afterVal);
+            Console.WriteLine(afterOther);
+
+            Console.WriteLine(myVal);
+            Console.WriteLine(myOtherVal);
+
+            Console.WriteLine(beforeVal);
+            Console.WriteLine(beforeOther);
+
         }
-        
+
+        // Method for explaing the Class type for a value.
+        public void GetSomeTypes()
+        {
+            Console.WriteLine(3.0.GetType());
+            Console.WriteLine(_myFloatValue.GetType());
+        }
+
+        // Method for showing basic Math
         public void BasicMath()
         {
-            int myVal = 5, myOtherVal = 10;
+            int myValMath = 5, myOther = 10;
 
-            int addVal = myVal + myOtherVal;
-            int subtractVal = myOtherVal - myVal;
-            int multiplyVal = myVal * myOtherVal;
-            int divisionVal = myVal / myOtherVal;
+            int addVal = myValMath + myOther;
+            int subtractVal = myOther - myValMath;
+            int multiplyVal = myOther * myValMath;
+            int divisionVal = myValMath / myOther;
+
+            // Values in between ( ) will be evaluated first.
+            int total = (addVal * multiplyVal) - divisionVal;
+
             Console.WriteLine(addVal);
             Console.WriteLine(subtractVal);
             Console.WriteLine(multiplyVal);
             Console.WriteLine(divisionVal);
+            Console.WriteLine(total);
         }
 
-        // Overflow Check Operators
-        public void CheckOperator()
+        /*
+            The checked keyword is used to explicitly enable overflow checking for integral-type
+            arithmetic operations and conversions.
+            https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked
+         */
+        public void CheckOperatorType()
         {
-            int test = 100;
-            int test2 = 100;
-            int testVal = checked(test * test2);
+            int val = 100, val2 = 100;
+            int testValue = checked(val * val2);
             checked
             {
-                testVal = test * test2;
+                int myCheck = val * val2;
             }
-            Console.WriteLine(test);
-            Console.WriteLine(test2);
-            Console.WriteLine(testVal);
+            Console.WriteLine(testValue);
         }
 
+        // Method for showing special values like NaN, Infinity and true/false
         public void SpecialValues()
         {
             Console.WriteLine(2.0 / 0.0);
@@ -125,67 +169,22 @@ namespace HelloWorld.Week2
             Console.WriteLine(2.0 / -0.0);
             Console.WriteLine(-2.0 / -0.0);
             Console.WriteLine(0.0 / 0.0);
-            Console.WriteLine((2.0/ -0.0) - (2.0 / 0.0));
+            Console.WriteLine((2.0 / -0.0) - (2.0 / 0.0));
             Console.WriteLine(0.0 / -0.0 == double.NaN);
-            Console.WriteLine(double.IsNaN(0.0/0.0));
+            Console.WriteLine(double.IsNaN(0.0 / 0.0));
             Console.WriteLine(object.Equals(0.0 / 0.0, double.NaN));
         }
 
-        public void ComparisonOperatorsNumeric()
+        public void MyCheckComparison()
         {
-            /**bool values can be true or false. Not cast type for bool to numeric types */
-            int x = 3, y = 5, z = 3;
-            Console.WriteLine(x == y); // False
-            Console.WriteLine(x != y); // true
-            Console.WriteLine(x = z); // true
+            int blue = 10, red = 12, green = 10;
+            //Equality Comparison
+            Console.WriteLine(blue == green);
+            //InEquality Comparison
+            Console.WriteLine(red != blue);
+
         }
 
-        /**
-     * Enums are a special type that allows you to specify a group of numeric constants.
-     * Converting an enum requires and explicit cast.
-     * **/
-        public void EnumSample()
-        {
-            Console.WriteLine("Value for days not set is {0}", Days.Thur);
-            Console.WriteLine("Favorite type of movie value is {0}", MovieType.Action);
-        }
-
-
-     /**
-      * To pass a Reference modifier we use the ref keyword
-     * **/
-        public void RefSample(ref int value)
-        {
-            int sample = value + 5;
-            Console.WriteLine(sample);
-        }
-    /**
-     *  The out keyword is like ref except that it doesn't need to be assigned before entering a method
-     * **/
-        public void OutSample(string name, out string firstName, out string lastName)
-        {
-            int myIndex = name.LastIndexOf(' ');
-            firstName = name.Substring(0, myIndex);
-            lastName = name.Substring(myIndex + 1);
-            Console.WriteLine(firstName);
-            Console.WriteLine(lastName);
-        }
-       
     }
-
-    /**
-     * Structs are simular to class files except its considered a value type rather than a reference type
-     * **/
-    public struct TestStruct
-    {
-        int testOne;
-        int testTwo;
-        public TestStruct(int one, int two)
-        {
-            this.testOne = one;
-            this.testTwo = two;
-        }
-    }
-        
 }
 

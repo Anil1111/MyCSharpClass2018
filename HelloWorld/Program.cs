@@ -1,6 +1,8 @@
 ﻿using System;
 using HelloWorld.Homework1RO;
 using HelloWorld.Testme;
+using HelloWorld.Week2;
+
 
 namespace HelloWorld
 {
@@ -91,13 +93,14 @@ namespace HelloWorld
             HelloWorld.Testme.IsPalinDrome myPalinDrome = 
             new HelloWorld.Testme.IsPalinDrome();
             myNumericType.BasicMath();
-            myNumericType.CheckOperator();
-            myNumericType.ComparisonOperatorsNumeric();
+            /* 
+       //     myNumericType.CheckOperator();
+       //     myNumericType.ComparisonOperatorsNumeric();
             myNumericType.ConvertFloatToInt();
-            myNumericType.EnumSample();
+      //      myNumericType.EnumSample();
            // myNumericType.RefSample(5);
             myNumericType.GetHashCode();
-            myNumericType.getSomeTypes();
+      //      myNumericType.getSomeTypes();
             myNumericType.GetType();
             myNumericType.IncrementDecrement();
             myNumericType.LongFromInt();
@@ -127,7 +130,7 @@ namespace HelloWorld
             myStatements.GetHashCode();
             myStatements.IfStatementBasicExample(x,y);
             myStatements.IfStatementChainExample(d);
-            myStatements.JumpStatementExample(d);
+            Console.WriteLine(myStatements.JumpStatementExample(d));
             myStatements.SwitchStatemntExample(d);
             myStatements.WhileLoopExample();
             myStatements.DoWhileLoopExample();
@@ -150,8 +153,37 @@ namespace HelloWorld
             mySchool2.DisplayGradeWord("F");
             mySchool2.DisplayGradeWord("X");
 
+            mySchool.DisplayGradeWord("e");
+            mySchool.DisplayGradeWord("v");
+            mySchool.DisplayGradeWord("g");
+            mySchool.DisplayGradeWord("a");
+            mySchool.DisplayGradeWord("f");
+            mySchool.DisplayGradeWord("x");
+
             myNaturalNumbers2.CountMe(numlimit);
-            myPalinDrome.IsPalindrome(d,answerPalinDrome);
+     //       myPalinDrome.IsPalindrome(d,answerPalinDrome);
+     */
+            AdditionalExamples ae = new AdditionalExamples();
+             
+
+        /*    Console.WriteLine(ae.UseUmbrella(true,false,true));
+            Console.WriteLine(ae.UseUmbrella(true,true,true));
+            Console.WriteLine(ae.UseUmbrella(false,false,false));
+            Console.WriteLine(ae.UseUmbrella(false,true,false));*/
+            Console.WriteLine(mySchool.DisplayGradeWord('E'));
+            Console.WriteLine(mySchool.DisplayGradeWord('V'));
+            Console.WriteLine(mySchool.DisplayGradeWord('G'));
+            Console.WriteLine(mySchool.DisplayGradeWord('A'));
+            Console.WriteLine(mySchool.DisplayGradeWord('F'));
+            Console.WriteLine(mySchool.DisplayGradeWord('X'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('E'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('V'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('G'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('A'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('F'));
+            Console.WriteLine(mySchool2.DisplayGradeWord('X'));
+
+
         }
     }
 }
